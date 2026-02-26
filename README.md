@@ -2,15 +2,6 @@
 
 Desktop GUI for running and chatting with **llama.cpp** (`llama-server.exe`) locally.
 
-LlamaGUI provides a simple interface to:
-- select GGUF models,
-- configure server/generation parameters,
-- start/stop the local server,
-- chat via OpenAI-compatible endpoint,
-- view logs and system information,
-- save/load presets.
-
----
 
 ## Features
 
@@ -23,7 +14,20 @@ LlamaGUI provides a simple interface to:
 - **System tab** with auto-refreshing system/GPU info.
 - **Presets**: save and load configuration presets.
 
----
+
+
+## Screenshots
+
+### Settings
+![Settings](https://github.com/user-attachments/assets/642d13ce-83b7-4f5e-b0f3-10d0ee71911f)
+
+### Chat
+![Chat](https://github.com/user-attachments/assets/4c3ff7a6-327e-4e82-b299-d281ac552a04)
+
+### Log
+![Log](https://github.com/user-attachments/assets/3fa649be-964a-4757-9d35-dbfc906e0079)
+
+
 
 ## Project Structure
 
@@ -53,7 +57,7 @@ pip install customtkinter requests psutil
 
 > If `psutil` is not installed, the app still works and uses fallback system info.
 
----
+
 
 ## Run
 
@@ -63,25 +67,28 @@ From project folder:
 python main.py
 ```
 
----
+
 
 ## Quick Start
 
-1. Open **Settings** tab.
-2. Select model (`File`) or model folder (`Folder`).
-3. Adjust server parameters (host/port, context, threads, etc.).
-4. Click **Start Server**.
-5. Open **Chat** tab, type a prompt, press **Send**.
+1. Download or build **llama.cpp** for Windows.
+2. Create a `bin` directory in the project root (if it does not exist).
+3. Place `llama-server.exe` inside the `bin` directory.
+4. Open **Settings** tab.
+5. Select model (`File`) or model folder (`Folder`).
+6. Adjust server parameters (host/port, context, threads, etc.).
+7. Click **Start Server**.
+8. Open **Chat** tab, type a prompt, press **Send**.
 
----
+
 
 ## Notes
 
-- Make sure the selected port is free.
-- Ensure `bin/llama-server.exe` exists.
-- For GPU usage, configure relevant llama.cpp flags and verify your drivers.
+- Make sure the selected port is not already in use.
+- Ensure `llama-server.exe` is located inside the `bin` directory.
+- For GPU usage, configure the appropriate llama.cpp flags and verify your GPU drivers.
 
----
+
 
 ## Troubleshooting
 
